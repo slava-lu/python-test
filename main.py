@@ -19,7 +19,11 @@ test1([4, 7, 36, 46, 6])
 
 def test2(array2):
     result = []
-    # напечатать сумму второго самого большого и второго самого маленького числа в массиве
+    array2.sort()
+    second_max = array2[-2]
+    second_min = array2[1]
+    result = second_max + second_min
+  
     print(result)
 
 
