@@ -1,10 +1,19 @@
 def test1(array1):
-    result = []
-    # найти и напечатать второе максимальное значение в числовом массиве
+    #result = []
+    #array1.sort()
+    #result = array1[-2]
+    #print(result)
+    
+    
+    y = max(array1)
+    array1.remove(y)
+    new_list = []
+    for value in array1:
+        new_list.append(value)
+        for i in new_list:
+            result = max(new_list)
+        
     print(result)
-
-
-# Пример ниже должен вывести 36
 test1([4, 7, 36, 46, 6])
 
 
