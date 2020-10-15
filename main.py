@@ -69,6 +69,10 @@ dict5 = {
     'name': 'Ivanka',
     'sex': 'abs'
 }
+dict6 = {
+    'name': 'Lovi',
+    'hobby': 'female'
+}
 
 
 def test4(mydict):
@@ -76,14 +80,16 @@ def test4(mydict):
     
 
     def create_text():
-        if "name" not in mydict:
+        if "name" not in mydict.keys():
             return "имя не задано"
-        if "male" in mydict.values():
-            return "{} is a boy".format(mydict["name"])
-        if "female" in mydict.values():
-            return "{} is a girl".format(mydict["name"])
-        if "female" or "male" not in mydict.values():
+        if "sex" not in mydict.keys():
             return "{} is someone".format(mydict["name"])
+        if mydict["sex"] == "male":
+            return "{} is a boy".format(mydict["name"])
+        if mydict["sex"] == "female":
+            return "{} is a girl".format(mydict["name"])
+        
+        return "{} is someone".format(mydict["name"])
         
     result = create_text()
 
@@ -98,3 +104,4 @@ test4(dict2)
 test4(dict3)
 test4(dict4)
 test4(dict5)
+test4(dict6)
