@@ -105,3 +105,16 @@ test4(dict3)
 test4(dict4)
 test4(dict5)
 test4(dict6)
+
+
+def test5(array1):
+    result = []
+    no_dubl_list = list(set(array1))
+    no_dubl_list.sort()
+    second_max = no_dubl_list[-2]
+    second_min = no_dubl_list[1]
+    
+    result = second_max + second_min
+
+    print(result)
+test5([3,4,4])
