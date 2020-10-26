@@ -1,0 +1,45 @@
+def test1(array1):
+    result1 = max(array1)
+    while result1 in array1:
+        array1.remove(result1)  
+    result = max(array1)
+    # найти и напечатать второе максимальное значение в числовом массиве
+    print(result)
+    
+def test2(array2):
+    result_max = max(array2)
+    result_min = min(array2)
+    while result_min in array2:
+        array2.remove(result_min)
+    result_min = min(array2)
+    while result_max in array2:
+        array2.remove(result_max)
+    result_max = max(array2)
+
+    result = result_max + result_min
+    print(result) # напечатать сумму второго самого большого и второго самого маленького числа в массиве
+   
+
+def test3(array3, array4):
+    result = list(map(sum, zip(array3, array4)))
+    
+    # Создать и напечатать новый массив, элементы которого равны суммам элеметов массивов array3 и array4
+    print(result)
+ 
+def test4(mydict):
+
+    name = mydict['name']
+    if name == '':
+        print('Name not given!')
+        return
+    else:
+        name = mydict['name']
+    sex = mydict['sex']
+    if sex == 'male':
+        sex = 'a boy'
+    elif sex == 'female':
+        sex = 'a girl'
+    else:
+        sex = 'someone'
+    result = '{} is {}'.format(name,sex)
+    print(result)
